@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: game; /* para inicializar el contador llamado game */
+        }
+        input:checked {
+            counter-increment: game; /* para incrementar de 1 en 1 si un input esta checked */
+            /* counter-increment: game 5; para incrementar de 5 en 5*/
+        }
+        .total-count::after {
+            content: counter(game);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+        <li><input type="checkbox" name="" id=""><div class="shield"></div></li>
+    </ul>
+    <h3 class="total-count">Score: </h3>
+</body>
+</html>
