@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,8 @@
             z-index: 1;
             height: 450px;
             width: 80px;
-            background: white;
+            /*outline: white solid 2px;
+            background: white; */
         }
         .layer-2 {                       /* Conejo */
             position: absolute;
@@ -37,7 +38,6 @@
             z-index: 1;
             height: 450px;
             width: 80px;
-            background: white;
         }
         .layer-3 {                       /* Muro */
             position: absolute;
@@ -57,7 +57,6 @@
             z-index: 4;
             height: 330px;
             width: 80px;
-            background: white;
         }
         .layer-5 {                       /* Muro */
             position: absolute;
@@ -75,7 +74,6 @@
             z-index: 6;
             height: 200px;
             width: 80px;
-            background: white;
         }
         .layer-7 {                       /* Muro */
             position: absolute;
@@ -115,20 +113,130 @@
             height: 80px;
             background-color: white;
         }
+        .left-ear--outer {
+            background: white;
+            border-radius: 90%;
+            width: 20px;
+            height: 50px;
+            position: absolute;
+            left: 10px;
+        }
+        .left-ear--inner {
+            background: pink;
+            border-radius: 90%;
+            width: 10px;
+            height: 40px;
+            position: absolute;
+            left: 15px;
+            top: 8px;
+        }
+        .right-ear--outer {
+            background: white;
+            border-radius: 90%;
+            width: 20px;
+            height: 50px;
+            position: absolute;
+            right: 10px;
+        }
+        .right-ear--inner {
+            background: pink;
+            border-radius: 90%;
+            width: 10px;
+            height: 40px;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+        }
+        .head {
+            width: 70px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .head__eye {
+            background-color: gray;
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 13px;
+        }
+        .head__eye--left {
+            left: 29px;
+        }
+        .head__eye--right {
+            right: 29px;
+        }
     </style>
 </head>
 <body>
     <div class="phone">
-        <div class="layer-1"></div>
-        <div class="layer-2"></div>
-        <div class="layer-3"></div>
-        <div class="layer-4"></div>
-        <div class="layer-5"></div>
-        <div class="layer-6"></div>
-        <div class="layer-7"></div>
-        <div class="layer-8"></div>
-        <div class="layer-9"></div>
-        <div class="layer-10"></div>
+        <div class="layer-1"> <!-- Conejo -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <div class="layer-2"> <!-- Conejo -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <div class="layer-3"> <!-- Muro -->
+
+            <!-- Hay que hacer la forma del muro según esta guía
+            https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 -->
+
+        </div>
+        <div class="layer-4"> <!-- Conejo -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <div class="layer-5"> <!-- Muro -->
+
+        </div>
+        <div class="layer-6"> <!-- Conejo -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <div class="layer-7"> <!-- Muro -->
+
+        </div>
+        <div class="layer-8"> <!-- Pasto -->
+
+        </div>
+        <div class="layer-9"> <!-- Nube -->
+
+        </div>
+        <div class="layer-10"> <!-- Nube -->
+
+        </div>
     </div>
 </body>
 </html>
