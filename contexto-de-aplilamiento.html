@@ -113,6 +113,11 @@
             height: 80px;
             background-color: white;
         }
+
+        /****************************************************************************************/
+        /******************************** Forma Conejo ******************************************/
+        /****************************************************************************************/
+
         .left-ear--outer {
             background: white;
             border-radius: 90%;
@@ -172,6 +177,20 @@
         .head__eye--right {
             right: 29px;
         }
+        
+        /****************************************************************************************/
+        /******************************** Forma Muro ******************************************/
+        /****************************************************************************************/
+        
+        .muro {
+            --tamaño: 100px;
+            background: 
+                linear-gradient(135deg, teal 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
+                linear-gradient(-135deg, teal 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
+                linear-gradient(45deg, teal 25%, transparent 25%),
+                linear-gradient(-45deg, teal 25%, transparent 25%);
+            background-size: var(--tamaño) var(--tamaño);
+        }
     </style>
 </head>
 <body>
@@ -196,7 +215,7 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-3"> <!-- Muro -->
+        <div class="layer-3 muro"> <!-- Muro -->
 
             <!-- Hay que hacer la forma del muro según esta guía
             https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 -->
