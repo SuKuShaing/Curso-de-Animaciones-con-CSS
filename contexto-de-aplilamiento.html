@@ -89,7 +89,7 @@
             height: 150px;
             background-color: var(--cafe-muro);
         }
-        .layer-8 {                       /* Pasto */
+        .layer-8 {                       /* Arbusto */
             position: absolute;
             left: 0;
             right: 0;
@@ -98,7 +98,7 @@
             z-index: 8;
             width: 200px;
             height: 100px;
-            background-color: green;
+            overflow: hidden;
         }
         .layer-9 {                       /* Nube */
             position: absolute;
@@ -184,8 +184,9 @@
         }
         
         /****************************************************************************************/
-        /******************************** Forma Muro ******************************************/
+        /***************************** Forma de los Muros ***************************************/
         /****************************************************************************************/
+
         .muralla {
             border-radius: 15px 15px 0 0;
             box-shadow: 0px 0px 43px rgba(0, 0, 0, 0.26);
@@ -210,6 +211,40 @@
             background-size: var(--tamaño) var(--tamaño);
             background-color: var(--sombra-pasto);
         }
+        
+        /****************************************************************************************/
+        /******************************** Forma Arbusto *****************************************/
+        /****************************************************************************************/
+        
+        .hoja-1 {
+            width: 80px;
+            height: 100px;
+            background: var(--verde-pasto);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -30px;
+        }
+        .hoja-2 {
+            width: 85px;
+            height: 120px;
+            background: var(--verde-pasto);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -20px;
+        }
+        .hoja-3 {
+            width: 100px;
+            height: 100px;
+            background: var(--verde-pasto);
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: -15px;
+        }
+
     </style>
 </head>
 <body>
@@ -266,8 +301,10 @@
             <div class="pasto_muro"></div>
             <div class="sombra_pasto"></div>
         </div>
-        <div class="layer-8"> <!-- Pasto -->
-
+        <div class="layer-8"> <!-- Arbusto -->
+            <div class="hoja-1"></div>
+            <div class="hoja-2"></div>
+            <div class="hoja-3"></div>
         </div>
         <div class="layer-9"> <!-- Nube -->
 
@@ -280,5 +317,10 @@
 </html>
 
 
-<!-- Hay que hacer la forma del muro en sig-zag según esta guía
-https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 -->
+<!-- 
+Hay que hacer la forma del muro en sig-zag según esta guía
+https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 
+
+Imagen de referencia del diseño general
+https://static.platzi.com/media/user_upload/image-aac4397e-78a9-41a6-ae4f-59a8be94e6ca.jpg
+-->
