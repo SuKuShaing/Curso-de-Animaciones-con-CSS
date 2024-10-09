@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        :root {
+            --cafe-muro: #be624b;
+            --verde-pasto: #52af5e;
+            --sombra-pasto: #a54a38;
+        }
         body {
             margin: 0;
             height: 100vh;
@@ -48,7 +53,7 @@
             z-index: 3;
             width: 220px;
             height: 400px;
-            background-color: wheat;
+            background-color: var(--cafe-muro);
         }
         .layer-4 {                       /* Conejo */
             position: absolute;
@@ -65,7 +70,7 @@
             z-index: 5;
             width: 220px;
             height: 280px;
-            background-color: BurlyWood;
+            background-color: var(--cafe-muro);
         }
         .layer-6 {                       /* Conejo */
             position: absolute;
@@ -82,7 +87,7 @@
             z-index: 7;
             width: 140px;
             height: 150px;
-            background-color: Goldenrod;
+            background-color: var(--cafe-muro);
         }
         .layer-8 {                       /* Pasto */
             position: absolute;
@@ -181,15 +186,29 @@
         /****************************************************************************************/
         /******************************** Forma Muro ******************************************/
         /****************************************************************************************/
-        
-        .muro {
-            --tamaño: 100px;
+        .muralla {
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0px 0px 43px rgba(0, 0, 0, 0.26);
+        }
+
+        .pasto_muro {
+            width: 100%;
+            height: 25px;
+            background-color: var(--verde-pasto);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .sombra_pasto {
+            --tamaño: 35px;
+            width: 100%;
+            height: var(--tamaño);
             background: 
-                linear-gradient(135deg, teal 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
-                linear-gradient(-135deg, teal 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
-                linear-gradient(45deg, teal 25%, transparent 25%),
-                linear-gradient(-45deg, teal 25%, transparent 25%);
+                linear-gradient(135deg, var(--verde-pasto) 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
+                linear-gradient(-135deg, var(--verde-pasto) 25%, transparent 25%) calc(var(--tamaño)/-2) 0,
+                linear-gradient(45deg, var(--cafe-muro) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--cafe-muro) 25%, transparent 25%);
             background-size: var(--tamaño) var(--tamaño);
+            background-color: var(--sombra-pasto);
         }
     </style>
 </head>
@@ -215,11 +234,9 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-3 muro"> <!-- Muro -->
-
-            <!-- Hay que hacer la forma del muro según esta guía
-            https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 -->
-
+        <div class="layer-3 muralla"> <!-- Muro -->
+            <div class="pasto_muro"></div>
+            <div class="sombra_pasto"></div>
         </div>
         <div class="layer-4"> <!-- Conejo -->
             <div class="left-ear--outer"></div>
@@ -231,8 +248,9 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-5"> <!-- Muro -->
-
+        <div class="layer-5 muralla"> <!-- Muro -->
+            <div class="pasto_muro"></div>
+            <div class="sombra_pasto"></div>
         </div>
         <div class="layer-6"> <!-- Conejo -->
             <div class="left-ear--outer"></div>
@@ -244,8 +262,9 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-7"> <!-- Muro -->
-
+        <div class="layer-7 muralla"> <!-- Muro -->
+            <div class="pasto_muro"></div>
+            <div class="sombra_pasto"></div>
         </div>
         <div class="layer-8"> <!-- Pasto -->
 
@@ -259,3 +278,7 @@
     </div>
 </body>
 </html>
+
+
+<!-- Hay que hacer la forma del muro en sig-zag según esta guía
+https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 -->
