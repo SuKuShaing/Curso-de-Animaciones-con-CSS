@@ -176,19 +176,22 @@
             top: 13px;
 
             animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* animation: blink 2s infinite; */
         }
 
         @keyframes blink {
-            0% {
-
+            0%, 10% {
+                height: 4px;
+                transform: translate(0, 0px);
             }
             5% {
-
-            }
-            10% {
-
+                transform: translate(0, 2px);
+                height: 1px;
             }
         }
+
         .head__eye--left {
             left: 29px;
         }
