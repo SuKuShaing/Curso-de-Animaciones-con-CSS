@@ -27,6 +27,7 @@
             background: #CCEFFF;
             overflow: hidden;
         }
+
         .layer-1 {                       /* Conejo */
             position: absolute;
             bottom: 0;
@@ -36,7 +37,30 @@
             width: 80px;
             /*outline: white solid 2px;
             background: white; */
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
         }
+
+        @keyframes layer {
+            0%, 100% {
+                transform: translateY(0);
+            }   
+            25% {
+                transform: translateY(80px);
+            }
+        }
+
+        .layer-1 input[type="checkbox"] {
+            appearance: none;
+            position: absolute;
+            top: 0;
+            height: 50px;
+            width: 80px;
+        }
+
         .layer-2 {                       /* Conejo */
             position: absolute;
             bottom: 0;
@@ -305,7 +329,8 @@
 </head>
 <body>
     <div class="phone">
-        <div class="layer-1"> <!-- Conejo -->
+        <div class="layer-1">                                    <!-- Conejo -->
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -315,7 +340,7 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-2"> <!-- Conejo -->
+        <div class="layer-2">                                   <!-- Conejo -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -325,11 +350,11 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-3 muralla"> <!-- Muro -->
+        <div class="layer-3 muralla">                           <!-- Muro -->
             <div class="pasto_muro"></div>
             <div class="sombra_pasto"></div>
         </div>
-        <div class="layer-4"> <!-- Conejo -->
+        <div class="layer-4">                                   <!-- Conejo -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -339,11 +364,11 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-5 muralla"> <!-- Muro -->
+        <div class="layer-5 muralla">                           <!-- Muro -->
             <div class="pasto_muro"></div>
             <div class="sombra_pasto"></div>
         </div>
-        <div class="layer-6"> <!-- Conejo -->
+        <div class="layer-6">                                   <!-- Conejo -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -353,20 +378,20 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>
-        <div class="layer-7 muralla"> <!-- Muro -->
+        <div class="layer-7 muralla">                           <!-- Muro -->
             <div class="pasto_muro"></div>
             <div class="sombra_pasto"></div>
         </div>
-        <div class="layer-8"> <!-- Arbusto -->
+        <div class="layer-8">                                  <!-- Arbusto -->
             <div class="hoja-1"></div>
             <div class="hoja-2"></div>
             <div class="hoja-3"></div>
         </div>
-        <div class="layer-9"> <!-- Nube -->
+        <div class="layer-9">                                  <!-- Nube -->
             <div class="cumulo-1"></div>
             <div class="cumulo-2"></div>
         </div>
-        <div class="layer-10"> <!-- Nube -->
+        <div class="layer-10">                                 <!-- Nube -->
             <div class="cumulo-3"></div>
             <div class="cumulo-4"></div>
         </div>
