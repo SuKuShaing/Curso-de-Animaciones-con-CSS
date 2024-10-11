@@ -58,12 +58,11 @@
         input[type="checkbox"] {
             appearance: none;
             cursor: pointer;
-            margin: 0;
-            position: relative;
+            position: absolute;
             top: 0;
             height: 50px;
             width: 80px;
-            z-index: 2;
+            margin: 0;
         }
         input[type="checkbox"]:focus {
             outline: none;
@@ -72,18 +71,9 @@
         input[type="checkbox"]:checked {
             counter-increment: score;
         }
-        input[type="checkbox"]:checked {
-            content: counter(score);
-        }
 
-        /* quede en que tengo que terminar el juego */
-        
         .layer-1 input[type="checkbox"] {
-            appearance: none;
-            position: absolute;
-            top: 0;
-            height: 50px;
-            width: 80px;
+            z-index: 2;
         }
 
         .layer-2 {                       /* Conejo */
@@ -93,7 +83,13 @@
             z-index: 1;
             height: 450px;
             width: 80px;
+            animation: layer 2s ease-out infinite;
         }
+
+        .layer-2 input[type="checkbox"] {
+            z-index: 2;
+        }
+
         .layer-3 {                       /* Muro */
             position: absolute;
             left: 0;
@@ -112,7 +108,13 @@
             z-index: 4;
             height: 330px;
             width: 80px;
+            animation: layer 1.5s ease-in infinite;
         }
+
+        .layer-4 input[type="checkbox"] {
+            z-index: 5;
+        }
+
         .layer-5 {                       /* Muro */
             position: absolute;
             left: 0;
@@ -129,7 +131,13 @@
             z-index: 6;
             height: 200px;
             width: 80px;
+            animation: layer 2.5s cubic-bezier(.07,.83,.62,.91) infinite;
         }
+
+        .layer-6 input[type="checkbox"] {
+            z-index: 7;
+        }
+
         .layer-7 {                       /* Muro */
             position: absolute;
             right: 0;
@@ -350,6 +358,24 @@
             bottom: 0px;
             left: 0;
         }
+
+        /****************************************************************************************/
+        /******************************** Forma de los Textos ***********************************/
+        /****************************************************************************************/
+
+        .textos {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            color: blue;
+        }
+
+        h3::after {
+            content: counter(score);
+        }
     </style>
 </head>
 <body>
@@ -366,6 +392,7 @@
             </div>
         </div>
         <div class="layer-2">                                   <!-- Conejo -->
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -380,6 +407,7 @@
             <div class="sombra_pasto"></div>
         </div>
         <div class="layer-4">                                   <!-- Conejo -->
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -394,6 +422,7 @@
             <div class="sombra_pasto"></div>
         </div>
         <div class="layer-6">                                   <!-- Conejo -->
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -419,6 +448,10 @@
         <div class="layer-10">                                 <!-- Nube -->
             <div class="cumulo-3"></div>
             <div class="cumulo-4"></div>
+        </div>
+        <div class="textos">
+            <h1>Animation Land</h1>
+            <h3>Score: </h3>
         </div>
     </div>
 </body>
